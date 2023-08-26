@@ -1,0 +1,988 @@
+*{
+	box-sizing: border-box;
+	transition: 3.25 linear;
+}
+:root{
+	font-size: 12pt;
+	line-height: 1.7rem;
+	--clr-blue:#a0b6df;
+	--clr-white:floralwhite;
+	/*--clr-red:tomato;*/
+	/*--clr-red:firebrick;*/
+	/*--clr-red:red;*/
+	--clr-red:#de4340;
+	--clr-green:#008b8bc9;
+	--clr-yellow:#daa520ab;
+	--clr-orange:lightsalmon;
+	--clr-purple:#66339991;
+}
+@font-face {
+  font-family: 'Standard Book';
+  src: url('standard-book-webfont.eot'); /* IE9 Compat Modes */
+  src: url('standard-book-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('standard-book-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('standard-book-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('standard-book-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('standard-book-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+       font-weight: 400;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Standard Book Italic';
+  src: url('standard-book-italic-webfont.eot'); /* IE9 Compat Modes */
+  src: url('standard-book-italic-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('standard-book-italic-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('standard-book-italic-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('standard-book-italic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('standard-book-italic-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+       font-weight:400;
+       font-style: italic;
+}
+@font-face {
+  font-family: 'Standard Bold';
+  src: url('standard-bold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('standard-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('standard-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('standard-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('standard-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('standard-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+       font-weight: 900;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Standard Bold Italic';
+  src: url('standard-bold-italic-webfont.eot'); /* IE9 Compat Modes */
+  src: url('standard-bold-italic-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('standard-bold-italic-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('standard-bold-italic-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('standard-bold-italic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('standard-bold-italic-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+        font-weight:900;
+       font-style: italic;
+}
+
+
+
+html{
+	scroll-behavior: smooth;
+
+}
+
+
+body{
+	margin:0;
+	font-family: "Standard Book", sans-serif;
+	background-color: var(--clr-white);
+	color:var(--clr-red);
+
+}	
+
+
+
+header{
+	position: fixed;
+	z-index: 1;
+	top:0;
+	left:0;
+	padding-top:1em;
+	padding-bottom: 1.5ch;
+	padding-left: 1.5em;
+	/*width: 100%;*/
+	
+	background-color: var(--clr-red);
+	color: var(--clr-white);
+
+	
+
+}
+
+
+
+
+
+
+
+.overlay {
+
+	font-size: 1.75em;
+
+
+
+
+height: 100%;
+
+
+ 
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: var(--clr-white);
+  background-color: rgba(255,250,240, .7);
+
+
+  overflow-x: hidden; 
+  transition: 0.5s; 
+}
+
+
+
+
+
+.overlay-content {
+
+  position: relative;
+  height: 100vh;
+
+
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  
+ 	left:0;
+ 	right:0;
+ 	margin:0;
+ 	padding:0;
+  
+
+ 	
+  text-align: center; 
+ 
+}
+
+.overlay-content li{
+	font-size: 2rem;
+
+	list-style-type: none;
+	
+	margin:1em;
+	padding: 0;
+
+
+	
+
+
+
+}
+
+
+.overlay a {
+  
+	background-color: transparent;
+
+  text-decoration: none;
+ 
+  transition: 0.3s; 
+
+  border-radius: 3em;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+  color: var(--clr-red);
+}
+
+
+.overlay .closebtn {
+ 
+	text-align: center;
+
+}
+
+
+#openbtn{
+	position: fixed;
+	font-size: 3em;
+	top: 2rem;
+	right:2rem;
+	z-index: 1;
+	color: var(--clr-white);
+}
+
+#openbtn:hover{
+	color:var(--clr-orange);
+}
+
+
+#home{
+	margin:0em;
+	padding-top:7em;
+	max-width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+
+main{
+	width: 100%;
+	
+}
+
+
+
+h1, h2, h3, h4{
+margin:0;
+padding: 0;
+font-weight: 400;
+
+	
+
+}
+h1{
+	font-family: "Standard Book", sans-serif;
+	font-size: 4rem;
+	line-height: 1em;
+
+	
+}
+h1 a:link{
+	padding: 0;
+	text-decoration: none;
+	border:none;
+}
+h2{
+	margin-top:.2em;
+/*font-size: 3.25vw;*/
+font-size: 18pt;
+line-height: 1.25em;
+}
+
+
+
+h4{
+	font-size: 3rem;
+	line-height: 1em;
+	text-align: center;
+	margin-bottom:.5em;
+
+}
+
+
+.child-study{
+	/*background-image: url(pexels-katerina-holmes-5905479.jpg);*/
+	
+	
+	background-size:cover;
+	background-position: center;
+	background-color: var(--clr-white);
+
+
+  
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+
+
+}
+.child-study img{
+	width:100%;
+	margin-top: 5vh;
+}
+
+
+
+
+
+.child-study figcaption{
+
+	color: var(--clr-red);
+	
+
+	background-color: var(--clr-white);
+
+	/*border-radius: 70px 70px 0px 0px; */
+
+	padding: 1.5rem;
+	
+	font-size: 1.25em;
+	line-height: 1.5em;	
+
+
+	
+}
+
+.child-study h3{
+	font-size: 2em;
+
+}
+
+.child-study p{
+
+}
+
+#services{
+	/*width: 100%;*/
+				
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	
+			}
+			#services ul{
+				margin: 0;
+				padding: 0;
+				width: 75vw;
+				list-style: none;
+				text-align: center;
+			}
+			#services li{
+				margin: 0;
+				padding: 0;
+
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+
+			#services h4{
+				font-size: 2em;
+				text-align: center;
+				color: var(--clr-white);
+				border-radius: 25em;
+		
+				margin: 0;
+				padding:3em;
+
+				width: 75vw;
+				height: 75vw;
+
+
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+
+			}
+
+			#services p{
+				font-size: 1rem;
+				text-align: center;
+				color: var(--clr-blue);
+			}
+
+
+
+
+
+
+
+
+
+h3{
+	font-size: 2.15em;
+	line-height: 1em;
+
+
+}
+
+
+
+
+
+
+p{
+	max-width: 66ch;
+
+}
+b{
+	font-weight: 400;
+	font-family: "Standard Bold", sans-serif;
+}
+i{
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Standard Bold Italic", sans-serif;
+}
+#forms p{
+	margin-bottom: 2em;
+}
+a:link, a:visited{
+	text-decoration: none;
+	border-bottom: 1px dotted;
+	padding:1ch;
+
+	/*background-color: var(--clr-blue);*/
+	background-color: var(--clr-red);
+	color:var(--clr-white);
+}
+a:hover{
+	background-color: var(--clr-orange);
+}
+
+.here{
+	border:none !important;
+		font-family: "Standard Bold", sans-serif;
+
+
+
+}
+
+
+li{
+	/*color:grey;*/
+
+/*margin-bottom: 1em;*/
+/*margin-right: 3em;*/
+/*border:1px solid black;*/
+padding: 1ch 0ch;
+margin-right: 1em;
+/*border-radius: .3ch;*/
+
+
+}
+
+ul li a{
+	/*white-space: nowrap;*/
+	background-color: var(--clr-red);
+	color:var(--clr-white);
+
+}
+#mandatedreportingrequirements, #aboutus, #privacy, #payment, #billofrights, #policies-procedures, #links, #suicideprevention, #lgbtqa, #delaware-clients, #interpreter, #typesofevaluations,  #forms, #directions{
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	margin:0 auto;
+	padding: 2em;
+	padding-top: 10em;
+	/*width: 100%;*/
+	max-width: 66ch;
+
+}
+#mandatedreportingrequirements li{
+	list-style: decimal;
+}
+
+h5{
+	font-size: 2rem;
+	line-height: 1em;
+	margin:0;
+}
+
+.sign{
+	font-family: 'Great Vibes', cursive;
+	font-size: 3rem;
+	color:var(--clr-white);
+}
+
+h6{
+	font-family: "Squiggle";
+	font-size: 50em;
+	list-style: 1em;
+	margin:0;
+	padding: 0;
+	color: green;
+	z-index: -99;
+	position: fixed;
+	top:33%;
+	display: none;
+}
+
+section{
+	
+}
+#team{
+	display: none;
+	/*display: flex;
+	flex-flow: row-reverse wrap;
+	justify-content: space-around;
+	width: 100%;*/
+}
+#team figure{
+	margin:0;
+	padding: 0;
+}
+#team figcaption{
+	width:100%;
+	max-width: 55ch;
+	margin-top: 3em;
+	
+
+
+}
+#team a:link, #team a:visited{
+	/*color: brown !important;*/
+}
+#team img{
+	width: 100%;
+		max-width: 700px;
+
+		/*border-radius: 3vw;*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#sa{
+	background-color: var(--clr-orange);
+}
+#sb{
+background-color: var(--clr-green);
+
+
+}
+#sc{
+	background-color: var(--clr-purple);
+}
+#sd{
+	background-color: var(--clr-yellow);
+}
+#se{
+	background-color: var(--clr-red);
+}
+
+
+
+
+
+#owner{
+
+	text-align: center;
+	/*width: 100%;*/
+	margin: 3em;
+	padding: 1em;
+	display: flex;
+	border-radius: 1em;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	color: var(--clr-white);
+	background-color: var(--clr-blue);
+	
+	
+}
+
+#owner figcaption{
+	margin: 2vh;
+	width: 66ch;
+	max-width: 100%;
+	font-family: "Standard Book", sans-serif;
+}
+#owner figcaption h3{
+	font-size: 2em;
+
+}
+#owner figcaption p{
+		/*font-family: "Standard Book Italic", sans-serif;*/
+line-height: 2em;
+font-size: 1.25em;
+/*font-size: 1.3rem;*/
+
+}
+
+#owner img{
+	width: 100px;
+	/*border-radius: 33em;*/
+}
+
+footer{
+	background-color: #eee;
+	/*width: 100%;*/
+	margin:1em;
+	margin-top: 3em;
+	padding:1em;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+
+}
+footer ul{
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
+
+}
+footer ul li{
+	white-space: nowrap;
+}
+footer ul a:link{
+	background-color: var(--clr-red);
+}
+
+footer div{
+	width: 40%;
+}
+footer a:link{
+	background-color: var(--clr-green);
+}
+address{
+	font-style: normal;
+
+}
+#designer{
+		color: grey;
+		background-color: transparent;
+		white-space: nowrap;
+
+}
+
+
+#aboutus h1{
+	text-align: center;
+}
+#aboutus h5{
+	text-align: center;
+	 margin:1em;
+}
+#aboutus section{
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width:100%;
+	max-width: 88ch;
+	margin:0 auto;
+	padding-bottom: 3em;
+
+	
+}
+
+#aboutus img{
+	width: 100%;
+	max-width: 80vw;
+
+	
+}
+#aboutus figure p{
+	font-size: 12pt;
+	line-height: 1em;
+}
+
+#aboutus figcaption{
+	margin-bottom: 3em; 
+	margin: 1em;
+	width:100%;
+	max-width: 77ch;
+}
+
+#aboutus h1{
+	font-size: 3em;
+}
+
+#aboutus h3{
+	text-align: center;
+	font-size: 1.7em;
+	line-height: 1.25em;
+}
+#payment{
+	/*margin-top:10em;*/
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#payment h1{
+	text-align: center;
+	margin-bottom:1em;
+}
+#payment a:link{
+	padding: 0;
+}
+#payment ul{
+	display: flex;
+	flex-flow: column nowrap;
+}
+#payment ul li{
+	list-style: decimal;
+	max-width: 66ch;
+	margin:1em;
+}
+#billofrights{
+	margin:0 auto;
+	width: 100%;
+	max-width: 66ch;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#billofrights a:link{
+	padding: 0;
+}
+
+
+
+#privacy p a:link{
+	padding: 0;
+}
+#privacy ul{
+
+	display: flex;
+flex-flow: column nowrap;
+}
+#privacy li{
+		list-style: decimal;
+
+	margin:1em;
+}
+
+
+#policies-procedures a:link{
+	padding: 0;
+}
+#ourservices{
+	padding-top: 10em;
+	margin:0 auto;
+	max-width: 70ch;
+	width:100%;
+	
+}
+
+#ourservices h1{
+	text-align: center;
+	 margin:1em;
+}
+#ourservices img{
+	width: 100%;
+	max-width: 500px;
+}
+
+
+#links a:link{
+	padding: 0;
+}
+#links ul{
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 66ch;
+	list-style-type: none;
+}
+#links li{
+	margin-bottom: 2em;
+}
+
+
+#suicideprevention a:link{
+	padding: 0;
+}
+#suicideprevention section{
+	max-width: 66ch;
+}
+
+#lgbtqa a:link{
+	padding: 0;
+}
+#lgbtqa li{
+	list-style: circle;
+	margin-left: 1em;
+}
+#lgbtqa ol{
+	margin:0;
+	padding: 0;
+}
+#lgbtqa ul{
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#delaware-clients p{
+	text-align: center;
+}
+
+
+#directions{
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	width: 100%;
+
+}
+#directions h4{
+	/*text-align: left;*/
+}
+#directions section{
+	/*margin: 3em;*/
+}
+
+
+section iframe{
+	filter: grayscale(100%);
+	z-index: -999;
+}
+summary{
+	border-bottom: 1px solid black;
+	color:var(--clr-red);
+}
+details{
+	color:grey;
+	margin-top:1em;
+}
+
+#typesofevaluations{
+	max-width: 66ch;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	/*width:100%;*/
+	
+	
+}
+
+#typesofevaluations h4{
+	text-align: center;
+	align-self: center;
+}
+
+#typesofevaluations section{
+	margin: 0;
+}
+
+
+
+#typesofevaluations ol{
+
+	padding:0;
+}
+
+#typesofevaluations ol li{
+	list-style-type: circle;
+	line-height: 1.75em;
+	padding: 0;
+	margin:0;
+} 
+
+#typesofevaluations details{
+	margin:0em;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+
+
+
+
+}
+
+@media only screen and (min-width: 1000px) {
+	#aboutus section{
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	width:100%;
+	max-width: 88ch;
+	margin:0 auto;
+
+	
+}
+
+.child-study{
+	background-image: url(pexels-katerina-holmes-5905479.jpg);
+	 justify-content: flex-end;
+	 height: 90vh;
+}
+.child-study img{
+	display: none;
+}
+
+
+
+
+
+
+
+}
+@media only screen and (min-width: 1000px) {
+
+#services{
+
+				
+	margin-bottom: 2em;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: baseline;
+	
+			}
+			#services ul{
+				width: 22vw;
+				list-style: none;
+				text-align: center;
+			}
+			#services li{
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+
+			#services h4{
+
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+				
+
+				font-size: 1.25em;
+				text-align: center;
+				color: var(--clr-white);
+				border-radius: 25em;
+
+				width: 22vw;
+				height: 22vw;
+			}
+
+			#services p{
+				font-size: 1rem;
+				text-align: center;
+			}
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
