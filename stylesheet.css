@@ -44,6 +44,7 @@ header{
 
 
 }
+
 details > summary {
   list-style: none;
 }
@@ -80,17 +81,21 @@ a:link, a:hover, a:visited{
 
 }
 a:hover{
-	text-shadow: 0 0 5px #fff;
+/*	text-shadow: 0 0 5px #fff;*/
 }
 
 main{	
 	margin: 6ch 2ch;
 	padding-right:8vw;
+
 }
 
 
 
 nav{
+
+
+
 	font-size: 2.75ch;
 	width: 7vw;
 	height: 80vh;
@@ -102,6 +107,9 @@ nav{
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-end;
+
+
+	display: none;
 }
 
 article{
@@ -142,7 +150,7 @@ max-width: 1200px;
 }
 
 footer{
-	height: 90vh;	
+/*	height: 90vh;	*/
 }
 
 
@@ -183,7 +191,7 @@ footer{
 	}
 
 
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9{display: none}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10 {display: none}
 
 
 
