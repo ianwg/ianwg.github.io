@@ -134,12 +134,12 @@ width: 100%;
 max-width: 1200px;
 
 }
-.desktop{
+/* .desktop{
 	display: none;
 }
 .mobile{
 
-}
+} */
 .small{
 	max-width: 550px;
 }
@@ -166,13 +166,13 @@ footer{
 	
 }
 @media only screen and (min-width:800px){
-	.mobile{
+/* 	.mobile{
 		display: none;
 	}
 	.desktop{
 		display: block;
 	}
-
+ */
 }
 
 @media only screen and (min-width: 1200px) {
