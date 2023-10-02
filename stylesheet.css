@@ -1,7 +1,7 @@
 *{box-sizing: border-box;
 	scroll-behavior: smooth;
 	scroll-margin: 6ch;
-  transition:1s linear;
+	transition:all 3s ease-in-out;
 
 }
 :root{
@@ -16,14 +16,14 @@
 	background-color: grey;
 }
 @font-face {
-  font-family: "Roman23";
-  src: url("Roman-23.woff2") format("woff2"),
-       url("Roman-23.woff") format("woff"),
-        url("Roman-23.ttf") format("truetype");
+  font-family: "Roman523";
+  src: url("Roman-523.woff2") format("woff2"),
+       url("Roman-523.woff") format("woff"),
+        url("Roman-523.ttf") format("truetype");
 }
 
 body{
-	font-family: "Roman23", sans-serif;
+	font-family: "Roman523", sans-serif;
     font-variant-ligatures: contextual;
     -moz-font-feature-settings: "calt";
     -webkit-font-feature-settings: "calt";
@@ -134,12 +134,12 @@ width: 100%;
 max-width: 1200px;
 
 }
-/* .desktop{
+.desktop{
 	display: none;
 }
 .mobile{
 
-} */
+}
 .small{
 	max-width: 550px;
 }
@@ -166,13 +166,13 @@ footer{
 	
 }
 @media only screen and (min-width:800px){
-/* 	.mobile{
+	.mobile{
 		display: none;
 	}
 	.desktop{
 		display: block;
 	}
- */
+
 }
 
 @media only screen and (min-width: 1200px) {
