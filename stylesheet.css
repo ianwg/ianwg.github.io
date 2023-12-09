@@ -42,7 +42,7 @@ body{
 header{
 /*	position: fixed;*/
 /*	z-index: 99;*/
-margin-top:1ch;
+margin-top:1.75ch;
 margin-bottom:1ch;
 /*	left:0;*/
 	cursor: pointer;
@@ -96,7 +96,7 @@ a:hover{
 
 main{	
 	margin-top: 1ch;
-	padding-right:8vw;
+	padding-right:10vw;
 
 }
 
@@ -257,20 +257,20 @@ align-items: center;
 
 
 #ml1, #ml2, #ml3{
-	width: 550px;
+	max-width: 550px;
 }
 
 
 #ml1{
-	background-image: url(flat/MLPentrance-1500.png);
+/*	background-image: url(flat/MLPentrance-1500.png);*/
 /*	background-position: left bottom;*/
-background-position: center center;
+/*background-position: center center;*/
 
 }
 #ml2{
-	background-image: url(flat/MLP-tote.png);
+/*	background-image: url(flat/MLP-tote.png);*/
 /*	background-position: left bottom;*/
-	background-position: center center;
+/*	background-position: center center;*/
 
 }
 #ml3{
@@ -299,7 +299,6 @@ background-position: center center;
 
 
 #ml1, #ml2, #ml3{
-	max-width:550px;
 	height: 85vh;
 	background-repeat: no-repeat;
 	background-size: contain;
