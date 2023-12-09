@@ -21,7 +21,6 @@
   font-family: "Roman23";
   src: url("Roman-23.woff2") format("woff2"),
        url("Roman-23.woff") format("woff");
-/*        url("Roman-23.ttf") format("truetype");*/
 }
 
 body{
@@ -299,7 +298,7 @@ align-items: center;
 
 
 #ml1, #ml2, #ml3{
-	height: 85vh;
+/* 	height: 85vh; */
 	background-repeat: no-repeat;
 	background-size: contain;
 }
