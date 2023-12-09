@@ -42,7 +42,7 @@ body{
 header{
 /*	position: fixed;*/
 /*	z-index: 99;*/
-margin-top:1.75ch;
+margin-top:1ch;
 margin-bottom:1ch;
 /*	left:0;*/
 	cursor: pointer;
@@ -106,7 +106,7 @@ nav{
 
 
 
-	font-size: 2ch;
+	font-size: 1ch;
 
 	height: 100%;
 	top:2ch;
