@@ -308,7 +308,7 @@ align-items: center;
 	background-repeat: no-repeat;
 }
 #deltamoms1, #deltamoms2, #deltamoms3{
-	height:85vh;
+/* 	height:85vh; */
 	background-repeat: no-repeat;
 	background-size: contain;
 }
