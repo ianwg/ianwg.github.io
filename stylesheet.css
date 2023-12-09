@@ -299,6 +299,7 @@ background-position: center center;
 
 
 #ml1, #ml2, #ml3{
+	max-width:550px;
 	height: 85vh;
 	background-repeat: no-repeat;
 	background-size: contain;
