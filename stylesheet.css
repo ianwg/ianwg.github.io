@@ -1,25 +1,27 @@
 *{box-sizing: border-box;
 	scroll-behavior: smooth;
-	scroll-margin: 6ch;
-	transition:all 3s ease-in-out;
+	scroll-margin: 3ch;
+/*	transition:all 3s ease-in-out;*/
 
 }
 :root{
     font-size: 10pt;
-	letter-spacing: 0.075ch;
-	--clr-text:#fff;
-	--clr-background:#000;
+    line-height: 1.3em;
+/*	letter-spacing: 0.05ch;*/
+	--clr-text:#000;
+	--clr-background:#fff;
+	--font:"Roman23";
 
 	text-rendering: optimizeLegibility;
 }
 ::selection{
-	background-color: grey;
+	background-color: cadetblue;
 }
 @font-face {
   font-family: "Roman23";
   src: url("Roman-23.woff2") format("woff2"),
-       url("Roman-23.woff") format("woff"),
-        url("Roman-23.ttf") format("truetype");
+       url("Roman-23.woff") format("woff");
+/*        url("Roman-23.ttf") format("truetype");*/
 }
 
 body{
@@ -31,17 +33,19 @@ body{
 	background-color: var(--clr-background);
 	color:var(--clr-text);
 	display: flex;
-	flex-flow: row nowrap;
-	margin: 0;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	margin: 1ch;
 	padding: 0;
 
 }
 header{
-	position: fixed;
-	z-index: 99;
-
-	margin:2ch;
-	left:0;
+/*	position: fixed;*/
+/*	z-index: 99;*/
+margin-top:1.75ch;
+margin-bottom:1ch;
+/*	left:0;*/
+	cursor: pointer;
 
 
 }
@@ -55,6 +59,11 @@ details summary::-webkit-details-marker {
 }
 
 
+
+
+header summary{
+	margin:0;
+}
 
 h1, h2, h3, h4, h5, h6, p{
     font-size:1em;
@@ -86,7 +95,7 @@ a:hover{
 }
 
 main{	
-	margin: 6ch 2ch;
+	margin-top: 1ch;
 	padding-right:8vw;
 
 }
@@ -97,26 +106,34 @@ nav{
 
 
 
-	font-size: 2.75ch;
-	width: 7vw;
-	height: 80vh;
-	top:1ch;
-	right:0.5ch;
-	position: fixed;
+	font-size: 2ch;
 
+	height: 100%;
+	top:1ch;
+	right:1ch;
+	position: fixed;
+	text-align: right;
+
+
+
+	
+
+}
+nav ol{
+		height: 85vh;
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: flex-end;
-
-
-	display: none;
 }
+
 
 article{
 	display: flex;
 	flex-flow: column nowrap;
+	justify-content: space-between;
 	margin-bottom: 10ch;
+
 
 }
 article p{
@@ -128,7 +145,21 @@ article p{
 article p a:link{
 	border-bottom: .2ch solid var(--clr-text);
 }
+footer a:link, footer a:visited{
+	background:var(--clr-text);
+	background-color: var(--clr-text);
+	color:var(--clr-background);
+	width:5ch;
+	height: 5ch;
+	padding:1ch 1.25ch;
+	border-radius: 5ch;
+	text-align: center;
+}
+u{
+	text-decoration: none;
+	border-bottom:.2ch solid var(--clr-text);
 
+}
 img{
 width: 100%;
 max-width: 1200px;
@@ -137,21 +168,43 @@ max-width: 1200px;
 .desktop{
 	display: none;
 }
-.mobile{
+.mobile{}
 
-}
 .small{
 	max-width: 550px;
 }
 .mid{
-	max-width: 850px;
+	max-width: 750px;
 }
+
+
+.border{border:.85px solid #aaa;}
+
+.gray{
+	filter: grayscale(100%);
+}
+
+.redux{
+height:829px;
+display: flex;
+flex-flow: column nowrap;
+justify-content:center;
+align-items: center;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root{
+  --clr-text:#fff;
+	--clr-background:#000;
+  }
 .inv{
 	filter: invert(100%);
 }
+.border{
+	border:none;
+}
 
-footer{
-/*	height: 90vh;	*/
 }
 
 
@@ -161,38 +214,38 @@ footer{
 
 
 
-
-@media only screen and (max-width: 500px) {
+/*@media only screen and (max-width: 500px) {
 	
-}
+}*/
 @media only screen and (min-width:800px){
 	.mobile{
 		display: none;
 	}
+
 	.desktop{
 		display: block;
 	}
 
 }
 
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 1200px) {
 	
 
 
 }
 @media only screen and (min-width: 1500px) {
 }
+*/
 
 
-#a .slideshow-container{
-
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: flex-end;
-	}
 
 
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10 {display: none}
+
+
+
+
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12, .mySlides13 
+{display: none}
 
 
 
@@ -203,22 +256,27 @@ footer{
 }
 
 
-
+#ml1, #ml2, #ml3{
+	width: 550px;
+}
 
 
 #ml1{
 	background-image: url(flat/MLPentrance-1500.png);
-	background-position: left bottom;
+/*	background-position: left bottom;*/
+background-position: center center;
 
 }
 #ml2{
 	background-image: url(flat/MLP-tote.png);
-	background-position: left bottom;
+/*	background-position: left bottom;*/
+	background-position: center center;
 
 }
 #ml3{
 	background-image: url(flat/ml.gif);
-	background-position: left bottom;
+/*	background-position: left bottom;*/
+	background-position: center center;
 	
 }
 
@@ -256,7 +314,7 @@ footer{
 	background-size: contain;
 }
 
-.mySlides1{
+.mySlides2{
 	height: 1000px;
 	max-height: 50vh;
 	background-repeat: no-repeat;
