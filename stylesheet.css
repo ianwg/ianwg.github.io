@@ -14,8 +14,11 @@
 
 	text-rendering: optimizeLegibility;
 }
+img::selection{
+	background-color: transparent;
+}
 ::selection{
-	background-color: cadetblue;
+	color: cadetblue;
 }
 @font-face {
   font-family: "Roman23";
