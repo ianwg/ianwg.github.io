@@ -4,12 +4,15 @@
 /*	transition:all 3s ease-in-out;*/
 
 }
+
+
+
 :root{
     font-size: 10pt;
     line-height: 1.3em;
 /*	letter-spacing: 0.05ch;*/
-	--clr-text:#000;
-	--clr-background:#fff;
+	--clr-text:#fff;
+	--clr-background:#000;
 	--font:"Roman23";
 
 	text-rendering: optimizeLegibility;
@@ -191,19 +194,7 @@ align-items: center;
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root{
-  --clr-text:#fff;
-	--clr-background:#000;
-  }
-.inv{
-	filter: invert(100%);
-}
-.border{
-	border:none;
-}
 
-}
 
 
 
@@ -320,5 +311,10 @@ align-items: center;
 	background-position: left bottom;
 }
 
-
+.inv{
+	filter: invert(100%);
+}
+.border{
+	border:none;
+}
 
