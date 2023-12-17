@@ -314,7 +314,7 @@ align-items: center;
 
 .mySlides2{
 	height: 1000px;
-	max-height: 50vh;
+	max-height: 600px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: left bottom;
