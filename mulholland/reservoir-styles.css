@@ -1,0 +1,66 @@
+*{box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-margin: 3ch;
+/*	transition:all 3s ease-in-out;*/
+
+}
+:root{
+    font-size: 10vw;
+    line-height: 1.3em;
+/*	letter-spacing: 0.05ch;*/
+	--clr-text:#fff;
+	--clr-background:#000;
+	--font:"Roman23";
+
+	text-rendering: optimizeLegibility;
+}
+::selection{
+	background-color: var(--clr-background);
+}
+@font-face {
+  font-family: "Reservoir";
+  src: url("MulhollandVF.woff2") format("woff2"),
+       url("MulhollandVF.woff") format("woff");
+}
+
+body{
+	font-family: "Reservoir", monospace;
+    font-variant-ligatures: contextual;
+    -moz-font-feature-settings: "calt";
+    -webkit-font-feature-settings: "calt";
+    font-feature-settings: "calt";
+	background-color: var(--clr-background);
+	color:var(--clr-text);
+	
+/*	height: 100%;*/
+	margin: 1ch;
+	padding: 0;
+
+}
+
+main{
+	height: 70vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	text-transform: capitalize;
+
+	font-variation-settings: "seri" 0, "shrp" 0;
+
+	animation: variable 3s linear infinite alternate;
+
+}
+
+@keyframes variable{
+	0%{
+		font-variation-settings: "seri" 0, "shrp" 0;
+	}
+	100%{
+		font-variation-settings: "seri" 100, "shrp" 100;
+	}
+}
+
+
