@@ -16,7 +16,7 @@
 }
 @font-face {
   font-family: "font";
-  src: 		url("ReservoirPlaquePreviewVF.woff") format("woff-variations");
+  src: 		url("ReservoirPlaquePreviewVF.woff") format("woff-variations"),
 	  url("ReservoirPlaquePreviewVF.woff2") format("woff2-variations");
 }
 
