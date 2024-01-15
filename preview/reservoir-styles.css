@@ -1,16 +1,13 @@
 *{box-sizing: border-box;
 	scroll-behavior: smooth;
 	scroll-margin: 3ch;
-/*	transition:all 3s ease-in-out;*/
 
 }
 :root{
     font-size: 12vw;
     line-height: 1.3em;
-/*	letter-spacing: 0.05ch;*/
 	--clr-text:#fff;
 	--clr-background:#000;
-	--font:"Roman23";
 
 	text-rendering: optimizeLegibility;
 }
@@ -19,7 +16,8 @@
 }
 @font-face {
   font-family: "font";
-  src: url("ReservoirPlaquePreviewVF.woff2") format("woff2-variations");;
+  src: 		url("ReservoirPlaquePreviewVF.woff") format("woff-variations");
+	  url("ReservoirPlaquePreviewVF.woff2") format("woff2-variations");
 }
 
 body{
