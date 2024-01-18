@@ -1,19 +1,16 @@
 *{box-sizing: border-box;
 	scroll-behavior: smooth;
 	scroll-margin: 3ch;
-/*	transition:all 3s ease-in-out;*/
-
-}
+ }
 
 
 
 :root{
     font-size: 10pt;
     line-height: 1.3em;
-/*	letter-spacing: 0.05ch;*/
 	--clr-text:#fff;
 	--clr-background:#000;
-	--font:"DeriveGrotesque";
+	--font:"Derive";
 
 	text-rendering: optimizeLegibility;
 }
@@ -24,13 +21,13 @@ img::selection{
 	color: cadetblue;
 }
 @font-face {
-  font-family: "DeriveGrotesque";
+  font-family: "Derive";
   src: url("DeriveGrotesque-Text.woff") format("woff");
       
 }
 
 body{
-	font-family: "DeriveGrotesque", sans-serif;
+	font-family: "Derive", sans-serif;
     font-variant-ligatures: contextual;
     -moz-font-feature-settings: "calt";
     -webkit-font-feature-settings: "calt";
@@ -45,11 +42,9 @@ body{
 
 }
 header{
-/*	position: fixed;*/
-/*	z-index: 99;*/
+
 margin-top:1ch;
 margin-bottom:1ch;
-/*	left:0;*/
 	cursor: pointer;
 
 
@@ -95,9 +90,7 @@ a:link, a:hover, a:visited{
 	
 
 }
-a:hover{
-/*	text-shadow: 0 0 5px #fff;*/
-}
+
 
 main{	
 	margin-top: 1ch;
