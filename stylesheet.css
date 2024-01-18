@@ -13,7 +13,7 @@
 /*	letter-spacing: 0.05ch;*/
 	--clr-text:#fff;
 	--clr-background:#000;
-	--font:"Roman23";
+	--font:"DeriveGrotesque";
 
 	text-rendering: optimizeLegibility;
 }
@@ -24,13 +24,13 @@ img::selection{
 	color: cadetblue;
 }
 @font-face {
-  font-family: "Roman23";
-  src: url("Roman-23.woff2") format("woff2"),
-       url("Roman-23.woff") format("woff");
+  font-family: "DeriveGrotesque";
+  src: url("DeriveGrotesque-Text.woff") format("woff");
+      
 }
 
 body{
-	font-family: "Roman23", sans-serif;
+	font-family: "DeriveGrotesque", sans-serif;
     font-variant-ligatures: contextual;
     -moz-font-feature-settings: "calt";
     -webkit-font-feature-settings: "calt";
